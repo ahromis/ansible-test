@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: no
+  tasks:
+    - name: check if nginx is present
+      apt:
+        name: nginx
+        state: present
+    - name: install nginx
+      apt:
+        name: nginx
+        state: latest
+        update_cache: yes
+
