@@ -20,9 +20,7 @@ def main():
         pipeline = {}
         pipeline['pipeline_id'] = pipeline_id
         pipeline['variables'] = {}
-        pipeline['variables']['OS_USER'] = target['os_user']
-        pipeline['variables']['IP'] = target['ip']
-        pipeline['variables']['SSH_KEY'] = target['ssh_key']
+        pipeline['variables']['TARGETS'] = target['targets']
         pipeline['variables']['PLAYBOOK'] = target['playbook']
         pipelines_to_run.append(pipeline)
     
